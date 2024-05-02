@@ -8,9 +8,9 @@ public class Principal {
         Scanner consola = new Scanner(System.in);
         int opc =0;
         do{
-            System.out.println("*******************************");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.println("       ARBOLES Y GRAFOS        ");
-            System.out.println("********************************");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.println("1) Arboles Binarios             ");
             System.out.println("2) Arboles Binarios de Búsqueda ");
             System.out.println("3) Arboles AVL                  ");
