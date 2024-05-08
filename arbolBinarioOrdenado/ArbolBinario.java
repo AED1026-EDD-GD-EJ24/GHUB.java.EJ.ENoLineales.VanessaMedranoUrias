@@ -135,11 +135,61 @@ public class ArbolBinario{
         }
 
     }
+    //insercion de nodo version iterativa 
+    private void insertar (Object valor)throws Exception{
+        Comparable dato= (Comparable)valor;
+        Nodo nuevo= new Nodo();
+        nuevo.setValor(dato);
 
-    private void insertar(Object valor) throws Exception{
-
+        if(raiz==null){
+            raiz=nuevo;
+        }
+        else{
+            //anterior hacereferencia alpadre de aux
+            Nodo anterior=null;
+            //aux es un auxiliar que vartecorriendo los nodos desde raiz
+            Nodo aux= raiz;
+            while(aux!=null){
+                anterior=aux;
+                if(dato.esMenor(aux.getValor())){
+                    aux=aux.getIzquierdo();
+                }
+                if(dato.esMayor(aux.getValor())){
+                    aux=aux.getDerecho();
+                }
+                else{
+                    throw new Exception("Dato duplicado");
+                }
+                if(dato.esMenor(anterior.getValor())){
+                    anterior.setIzquierdo(nuevo);
+                }else{
+                    anterior.setDerecho(nuevo);
+                }
+            }
+        }
     }
 
+    //version recursiva de insertar 
+
+    public void insertar2(Object valor) throws Exception{
+        Comparable dato=(Comparable)valor;
+        raiz=insertarRec(raiz,dato);
+    }
+    private Nodo insertarRec(Nodo raizSub, Comparable dato){
+        if(raizSub==null)
+        {
+            //caso base termina la recursividad 
+            raizSub=new Nodo(dato);
+         } else{
+                if(dato.esMenor(raizSub.getValor())){
+                    Nodo iz=insertarRec(raizSub.getIzquierdo(), dato),
+                    raizSub.setIzquierdo(iz);
+                }else{
+                    
+                }
+            }
+        
+    }
     
 
     
