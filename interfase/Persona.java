@@ -1,6 +1,6 @@
 package interfase;
 
-public class Persona implements Comparable <Persona> {
+public class Persona {
     private int id;
     private String nombre;
     public Persona(int id, String nombre) {
@@ -26,17 +26,6 @@ public class Persona implements Comparable <Persona> {
     public String toString() {
         return "Persona [id=" + id + ", nombre=" + nombre + "]";
     }
-    @Override
-    public int compareTo(Persona o) {
-        if(this.nombre.compareTo(o.getNombre())<0)
-        {
-            return -1;
-        }
-        if(this.nombre.compareTo(o.getNombre())>0)
-        {
-            return 1;
-        }
-        return 0;
-    }
+    
    
 }

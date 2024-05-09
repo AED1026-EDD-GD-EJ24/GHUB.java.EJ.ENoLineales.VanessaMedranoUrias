@@ -2,7 +2,15 @@ package interfase;
 
 public class CriterioPersonaId extends Criterio<Persona> {
     public int comparar(Persona a, Persona b){
-        return a.getId()-b.getId();
+        if(a.getId()==b.getId())
+        {
+            return 0;
+        }
+        if (a.getId()> b.getId())
+        {
+            return 1;
+        }
+        return -1;
     }
     
 }

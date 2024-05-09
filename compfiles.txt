@@ -1,3 +1,12 @@
+./colas/Nodo.java
+./colas/Cola.java
+./arbolBinarioOrdenado/Entero.java
+./arbolBinarioOrdenado/Estudiante.java
+./arbolBinarioOrdenado/Persona.java
+./arbolBinarioOrdenado/DemoComparable.java
+./arbolBinarioOrdenado/Comparable.java
+./arbolBinarioOrdenado/ArbolBinario.java
+./arbolBinarioOrdenado/Nodo.java
 ./arbolBinario/ArbolBinario.java
 ./arbolBinario/Nodo.java
 ./pilas/Nodo.java
@@ -8,3 +17,8 @@
 ./miPrincipal/AppGrafos.java
 ./miPrincipal/Principal.java
 ./miTest/AppTest.java
+./interfase/Persona.java
+./interfase/DemoComparable.java
+./interfase/CriterioPersonaNombre.java
+./interfase/CriterioPersonaId.java
+./interfase/Criterio.java

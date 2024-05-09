@@ -136,7 +136,7 @@ public class ArbolBinario{
 
     }
     //insercion de nodo version iterativa 
-    private void insertar (Object valor)throws Exception{
+    public void insertar (Object valor)throws Exception{
         Comparable dato= (Comparable)valor;
         Nodo nuevo= new Nodo();
         nuevo.setValor(dato);
@@ -169,28 +169,36 @@ public class ArbolBinario{
         }
     }
 
-    //version recursiva de insertar 
+   //Version recursiva de insertar
+   public void insertar2(Object valor) throws Exception{
+    Comparable dato = (Comparable)valor;
+    raiz = insertarRec(raiz, dato);
+}
 
-    public void insertar2(Object valor) throws Exception{
-        Comparable dato=(Comparable)valor;
-        raiz=insertarRec(raiz,dato);
-    }
-    private Nodo insertarRec(Nodo raizSub, Comparable dato){
-        if(raizSub==null)
-        {
-            //caso base termina la recursividad 
-            raizSub=new Nodo(dato);
-         } else{
-                if(dato.esMenor(raizSub.getValor())){
-                    Nodo iz=insertarRec(raizSub.getIzquierdo(), dato),
-                    raizSub.setIzquierdo(iz);
-                }else{
-                    
-                }
+private Nodo insertarRec(Nodo raizSub, Comparable dato) throws Exception{
+    if(raizSub == null)
+       //caso base, termina la recursividad
+       raizSub = new Nodo(dato);
+    else{
+        if (dato.esMenor(raizSub.getValor())){
+            Nodo iz = insertarRec(raizSub.getIzquierdo(), dato);
+            raizSub.setIzquierdo(iz);
+
+        }else{
+            if(dato.esMayor(raizSub.getValor())){
+                Nodo dr = insertarRec(raizSub.getDerecho(),dato);
+                raizSub.setDerecho(dr);
             }
-        
+            else{
+                 
+               throw new Exception("Nodo duplicado");
+            }
+        }
     }
-    
+    return raizSub;
+}
 
-    
+
+
+
 }
