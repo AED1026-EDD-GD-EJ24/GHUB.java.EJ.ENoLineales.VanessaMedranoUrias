@@ -35,7 +35,7 @@ public class Principal {
              break;
          
           case 0:
-             System.out.println("BYE!");
+             System.out.println("ADIOS!");
              consola.close();
              break;
           default:

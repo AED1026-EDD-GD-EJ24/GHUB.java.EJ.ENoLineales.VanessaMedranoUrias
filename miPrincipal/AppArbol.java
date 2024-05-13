@@ -17,7 +17,7 @@ public class AppArbol{
             System.out.println("2) Recorrido InOrden            ");
             System.out.println("3) Recorrido PreOrden           ");
             System.out.println("4) Recorrido PostOrden          ");
-            System.out.println("5) Recorrido por niveles ");
+            System.out.println("5) Recorrido por Niveles        ");
             System.out.println("6) Buscar nodo                  ");
             System.out.println("7) Eliminar nodo                ");
             System.out.println("8) Altura del árbol             ");
@@ -45,8 +45,9 @@ public class AppArbol{
                 case 4:
                     recorridoPostOrden();
                     break;
-                    case 5:
-                    recorridoPorNiveles();
+                case 5:
+                   recorridoPorNiveles();
+                   break;
                 case 0:
                     System.out.println("Hasta luego");
                     
@@ -85,8 +86,9 @@ public class AppArbol{
         ArbolBinario ab = insertarNodo();
         System.out.println("\n Recorrido inOrden Recursivo");
         ab.inOrden();
-        System.out.println("\n Recorrido inOrden Iterativo");
+        System.out.println("\n Recorrido inOrden Iterativa");
         ab.inOrdenIterativo();
+
        
 
     }
@@ -95,10 +97,8 @@ public class AppArbol{
         ArbolBinario ab = insertarNodo();
         System.out.println("\n Recorrido preOrden Recursivo");
         ab.preOrden();
-        System.out.println("\n Recorrido preOrden Iterativo" );
-        ab.preordenIterativo();
-        
-          
+        System.out.println("\n Recorrido preOrden Iterativo");
+        ab.preordenIterativo();   
 
     }
     public static void recorridoPostOrden(){
@@ -106,12 +106,14 @@ public class AppArbol{
         ArbolBinario ab = insertarNodo();
         System.out.println("\n Recorrido postOrden Recursivo");
         ab.postOrden();
-        System.out.println("\n Recorrido posOrden Iterativo");
+        System.out.println("\n Recorrido postOrden Iterativo");
         ab.postOrdenIterativo();
+
     }
     public static void recorridoPorNiveles(){
-        //crea un arbol y lo recorre por niveles 
-        
+        //crea un árbol y lo recorre por Niveles
+        ArbolBinario ab= insertarNodo();
+        System.out.println("\n Recorrido por Niveles");
+        ab.recorridoPorNivel();
     }
-
 }

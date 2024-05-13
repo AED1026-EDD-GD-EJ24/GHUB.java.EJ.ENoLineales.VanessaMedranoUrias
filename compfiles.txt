@@ -6,6 +6,7 @@
 ./arbolBinarioOrdenado/DemoComparable.java
 ./arbolBinarioOrdenado/Comparable.java
 ./arbolBinarioOrdenado/ArbolBinario.java
+./arbolBinarioOrdenado/BTreePrinter.java
 ./arbolBinarioOrdenado/Nodo.java
 ./arbolBinario/ArbolBinario.java
 ./arbolBinario/Nodo.java
