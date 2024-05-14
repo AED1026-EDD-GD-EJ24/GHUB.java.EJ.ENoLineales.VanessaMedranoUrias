@@ -21,23 +21,23 @@ public class Principal {
           opc=consola.nextInt();
 
           switch (opc){
-          case 1:
-             AppArbol.menu();
-             break;
-          case 2:
-             AppArbolBinarioBusqueda.menu();
-             break;
-          case 3:
-             AppArbolAVL.menu();
-             break;
-          case 4:
-             AppGrafos.menu();
-             break;
-         
-          case 0:
-             System.out.println("ADIOS!");
-             consola.close();
-             break;
+            case 1:
+               AppArbol.menu();
+               break;
+            case 2:
+               AppArbolBinarioBusqueda.menu();
+               break;
+            case 3:
+               AppArbolAVL.menu();
+               break;
+            case 4:
+               AppGrafos.menu();
+               break;
+           
+            case 0:
+               System.out.println("CHAO BYE!");
+               consola.close();
+               break;
           default:
              System.out.println("Valor incorrecto, intente de nuevo!");
       }
