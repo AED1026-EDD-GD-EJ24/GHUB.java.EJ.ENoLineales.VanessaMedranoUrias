@@ -3,6 +3,7 @@
 ./arbolAVL/Entero.java
 ./arbolAVL/ArbolAVL.java
 ./arbolAVL/Comparable.java
+./arbolAVL/BTreePrinter.java
 ./arbolAVL/Nodo.java
 ./arbolAVL/Logical.java
 ./arbolBinarioOrdenado/Entero.java

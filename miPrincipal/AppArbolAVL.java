@@ -3,7 +3,6 @@ import arbolAVL.*;
 import arbolAVL.Entero;
 
 import java.util.Scanner;
-import arbolBinarioOrdenado.*;
 public class AppArbolAVL{
     public static void menu(){
         Scanner consola = new Scanner(System.in);
@@ -19,9 +18,9 @@ public class AppArbolAVL{
         System.err.println();
         System.out.println("0) SALIR                       ");
         System.out.print("Selecciona opción:");
-        
-        }
         opc=consola.nextInt();
+        }
+        
         switch (opc) {
             case 1:
                 insertarNodo();
@@ -43,11 +42,15 @@ public class AppArbolAVL{
         ArbolAVL arbolito = new ArbolAVL();
         try {
             //insertar algunos elementos 
+            arbolito.insertar(new Entero(10));
+            arbolito.insertar(new Entero(15));
+            arbolito.insertar(new Entero(30));
+            arbolito.insertar(new Entero(5));
             arbolito.insertar(new Entero(2));
-            arbolito.insertar(new Entero(4));
-            arbolito.insertar(new Entero(6));
-          //  BTreePrinter.printNode(arbolito.getRaiz());
-          arbolito.getRaiz();
+            arbolito.insertar(new Entero(1));
+            arbolito.insertar(new Entero(40));
+            BTreePrinter.printNode(arbolito.getRaiz());
+      
           
         } catch (Exception e) {
            System.out.println("Error "+e.getMessage());
