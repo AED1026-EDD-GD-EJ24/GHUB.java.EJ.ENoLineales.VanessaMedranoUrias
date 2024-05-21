@@ -1,4 +1,3 @@
-
 package miPrincipal;
 import java.util.Scanner;
 

@@ -19,7 +19,6 @@ public class Principal {
           System.out.println("0) SALIR                        ");
           System.out.print("Selecciona opción:");
           opc=consola.nextInt();
-
           switch (opc){
             case 1:
                AppArbol.menu();
@@ -35,14 +34,14 @@ public class Principal {
                break;
            
             case 0:
-               System.out.println("CHAO BYE!");
+               System.out.println("ADIOS!");
                consola.close();
                break;
-          default:
-             System.out.println("Valor incorrecto, intente de nuevo!");
-      }
-     
-  }while (opc != 0);
+            default:
+               System.out.println("Valor incorrecto, intente de nuevo!");
+        }
+       
+    }while (opc != 0);
     
  }
 }
